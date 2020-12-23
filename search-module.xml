@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="google-search-module">
+    <test name="search-for-java">
+        <parameter name="searchKey" value="java"/>
+        <classes>
+            <class name="com.searchmodule.tests.GoogleSearchTest"/>
+        </classes>
+    </test>
+    <test name="search-for-selenium">
+        <parameter name="searchKey" value="selenium"/>
+        <classes>
+            <class name="com.searchmodule.tests.GoogleSearchTest"/>
+        </classes>
+    </test>
+    <test name="search-for-docker">
+        <parameter name="searchKey" value="docker"/>
+        <classes>
+            <class name="com.searchmodule.tests.GoogleSearchTest"/>
+        </classes>
+    </test>
+    <test name="search-for-c++">
+        <parameter name="searchKey" value="C++"/>
+        <classes>
+            <class name="com.searchmodule.tests.GoogleSearchTest"/>
+        </classes>
+    </test>
+</suite>

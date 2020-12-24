@@ -9,7 +9,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                	bat "docker build -t='jileb/selenium-docker:latest' ."
+                	bat "docker build -t jileb/selenium-docker ."
                 }
             }
         }

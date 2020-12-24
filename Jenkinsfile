@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clean') {
-            steps {
-                    bat "echo JAVA_HOME=$JAVA_HOME"
-                    bat "mvn clean"
-                }
-            }
         stage('Build Jar') {
             steps {
                 bat 'mvn clean package -DskipTests'

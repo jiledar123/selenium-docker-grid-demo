@@ -3,12 +3,10 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                withMaven(maven: 'Default',jdk: 'Java 8') {
                     bat "echo JAVA_HOME=$JAVA_HOME"
                     bat "mvn clean"
                 }
             }
-        }
         stage('Build Jar') {
             steps {
                 bat 'mvn clean package -DskipTests'

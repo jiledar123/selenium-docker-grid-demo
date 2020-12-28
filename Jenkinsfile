@@ -16,6 +16,8 @@ pipeline {
         stage('Push Image') {
             steps {
                 withCredentials([usernamePassword(credentialsId:'Docker', passwordVariable:'pass', usernameVariable:'user' )]){
+                bat "echo $(user)"
+                bat "echo $(pass)"
                 bat "docker login --username=\$(user) --password=\$(pass)"
                 bat "docker push jileb/selenium-docker:latest"
                 }

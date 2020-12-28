@@ -8,6 +8,6 @@ ADD target/libs libs
 ADD book-flight.xml book-flight.xml
 ADD search-module.xml search-module.xml
 
-ADD healthcheck.sh healthcheck.sh
+RUN wget https://s3.amazonaws.com/selenium-docker/healthcheck/healthcheck.sh
 ENTRYPOINT sh healthcheck.sh
 
